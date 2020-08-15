@@ -363,7 +363,7 @@ ul {
     }
 
     .nav-main ul.nav-ul {
-        display: block;
+        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -371,14 +371,8 @@ ul {
         background-color: #FFE0E0;
         padding: 30px;
         padding-top: 80px;
-        transform: translateY(-600px);
         width: 100%;
-        transition: transform .5s ease-in-out;
         z-index: 120;
-    }
-
-    .nav-main ul.nav-ul.show {
-        transform: translateY(-20px);
     }
 
     .nav-main ul.nav-ul li {
