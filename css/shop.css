@@ -4,23 +4,27 @@
 
 /* * --------------- SCROLL BAR --------------- * */
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar ,
+.popup::-webkit-scrollbar{
     width: 10px;
     height: 5px;
     background-color: transparent;
 }
 
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track ,
+.popup::-webkit-scrollbar-track {
     background: #f6f6f6;
     border-radius: 5px;
 }
 
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb ,
+.popup::-webkit-scrollbar-thumb {
     background: #ffbdbd;
     border-radius: 5px;
 }
 
-body::-webkit-scrollbar-thumb:hover {
+body::-webkit-scrollbar-thumb:hover ,
+.popup::-webkit-scrollbar-thumb:hover {
     background: #ff7a7a;
 }
 
@@ -51,7 +55,7 @@ ul {
 #foto-user {
     margin-right: 50px;
     margin-left: 10px;
-    margin-top: 20px;
+    margin-top: 8px;
     width: 45px;
     height: 45px;
     border-radius: 29px;
@@ -64,9 +68,9 @@ ul {
 .nav-main .nav-ul li a {
     padding: 20px 40px;
     margin: 0 20px;
-    color: #000000;
+    color: #444;
     font-size: 1em;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 24px;
     transition: all 0.5s ease;
 }
@@ -75,7 +79,7 @@ ul {
     color: #FF8888;
 }
 
-/* Cart */
+/* *** Cart ***
 .ul-perfil i {
     padding: 10px;
     margin: 20px 10px;
@@ -84,8 +88,9 @@ ul {
     transition: all 0.5s ease;
 }
 .ul-perfil i:hover {
-    color: #FF8888;
+    color: #FFCFCF;
 }
+*/
 
 /* In the page */
 #in {
@@ -114,7 +119,7 @@ ul {
     margin-bottom: 20px;
     width: 500px;
     border-radius: 5px;
-    border: solid 1px #ffc6c6;
+    border: solid 1px #FFCFCF;
     z-index: 110;
 }
 
@@ -125,7 +130,7 @@ ul {
     font-weight: 400;
     line-height: 19px;
     padding: 10px 10px;
-    border-bottom: 1px solid #FFC6C6;
+    border-bottom: 1px solid #FFCFCF;
     transition: all 0.3s ease;
 }
 
@@ -147,7 +152,7 @@ ul {
 
 /** UL DESPLEGADO **/
 .main-filter-ul li ul a:hover {
-    background-color:#FFC6C6;
+    background-color:#FFCFCF;
 }
 
 .main-filter-ul li ul {
@@ -166,7 +171,7 @@ ul {
     display: flex;
     margin: auto;
     justify-content: center;
-    border-bottom: solid 2px #ffc8c8;
+    border-bottom: solid 2px #FFCFCF;
 }
 
 .pagination a {
@@ -244,11 +249,11 @@ ul {
     line-height: 17px;
 }
 
-.recetas a ,
-.recetas div span {
+.recetas a
+/* .recetas div span */ { 
     display: inline-block;
     padding: 10px;
-    width: 49%;
+    width: 100%; /*Modificar el width si se agrega el carrito*/
     text-align: center;
     color: #ffffff;
     font-size: 1em;
@@ -266,6 +271,139 @@ ul {
     background-color: #444444;
 }
 
+
+/* * --------------------- * */
+/* * -------POPUP-------- * */
+/* * --------------------- * */
+
+.overlay {
+    background: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.overlay.active {
+    visibility: visible;
+}
+
+.popup {
+    border-radius:5px;
+    background: #f9f9f9;
+    box-shadow: 0px 0px 40px 6px rgba(0,0,0,0.19);
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+    height: 700px;
+    overflow: auto;
+
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: scale(0.8);
+}
+
+.popup span {
+    display: block;
+    text-align: right;
+    padding: 5px;
+}
+
+.popup .btn-cerrar-popup {
+    font-size: 21px;
+    line-height: 16px;
+    color: rgb(180, 180, 180);
+    transition: all 0.3s ease;
+    padding: 15px;
+}
+
+.popup .btn-cerrar-popup:hover {
+    color: #ff7a7a;
+}
+
+.popup img {
+    width: 600px;
+    box-shadow: 0px 30px 24px -3px rgba(100,100,100,0.24);
+
+    opacity: 0;
+}
+
+.popup h2 {
+    color: #444444;
+    font-size: 3.2em;
+    font-weight: 900;
+    line-height: 65px;
+    margin-top: 10px;
+
+    opacity: 0;
+}
+
+.popup h4 {
+    color: #ffc6c6;
+    font-size: 1.6em;
+    font-weight: 700;
+    line-height: 32px;
+    margin-top: 10px;
+
+    opacity: 0;
+}
+
+.popup p {
+    color: #444444;
+    font-size: 0.9em;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    width: 70%;
+    margin: 20px auto 50px auto;
+
+    opacity: 0;
+}
+
+.popup .btn-buynow {
+    color: #ffc6c6;
+    background: #f9f9f9;
+    padding: 5px 50px;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 17px;
+    text-align: center;
+    border-radius: 5px;
+    border: solid 1px #ffc6c6;
+
+    transition: all 0.2s ease;
+    opacity: 0;
+}
+
+.popup .btn-buynow:hover {
+    background: #444;
+}
+
+
+/* * -------POPUP--------- * */
+/* * ----ANIMACIONES------ * */
+
+.popup.active {    opacity: 1;     transform: scale(1);    }
+
+.popup.active img {    animation: entrada 0.5s ease 0.3s forwards;    }
+.popup.active h2 {    animation: entrada 0.8s ease 0.5s forwards;    }
+.popup.active h4 {    animation: entrada 0.9s ease 0.8s forwards;    }
+.popup.active p ,
+.popup.active .btn-buynow {    animation: entrada 1s ease 0.9s forwards;    }
+
+@keyframes entrada {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 /* * --------------------- * */
 /* * -------FOOTER-------- * */
@@ -306,6 +444,11 @@ ul {
 .footer .footer-ul-redes li a:hover {
     color: #FF8888;
 }
+
+
+/* * --------------------- * */
+/* * -----RESPONSIVE------ * */
+/* * --------------------- * */
 
 @media screen and (max-width: 1200px) { 
     
@@ -385,7 +528,6 @@ ul {
     }
 
     .ul-perfil {
-        margin-top: 10px;
         margin-right: 45px;
     }
 
