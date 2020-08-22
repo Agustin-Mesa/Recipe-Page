@@ -286,7 +286,8 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    visibility: hidden;
+    visibility: hidden;    
+    z-index: 130;
 }
 
 .overlay.active {
@@ -329,6 +330,7 @@ ul {
 .popup img {
     width: 600px;
     box-shadow: 0px 30px 24px -3px rgba(100,100,100,0.24);
+    border-radius: 5px;
 
     opacity: 0;
 }
@@ -336,7 +338,7 @@ ul {
 .popup h2 {
     color: #444444;
     font-size: 3.2em;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 65px;
     margin-top: 10px;
 
@@ -456,6 +458,10 @@ ul {
         justify-content: center;
     }
 
+    .popup .btn-cerrar-popup {
+        padding: 0 0 0 20px;
+    }
+
 }
 
 @media screen and (max-width: 1020px) {
@@ -531,6 +537,10 @@ ul {
         margin-right: 45px;
     }
 
+    .popup {
+        width: 70%;
+    }
+
     .footer ul.footer-ul-redes {
         display: flex;
         justify-content: center;
@@ -585,5 +595,14 @@ ul {
 
     .recetas div {
         width: 100%;
+    }
+
+    .popup {
+        width: 90%;
+        height: 500px;
+    }
+
+    .popup p {
+        width: 90%;
     }
 }
