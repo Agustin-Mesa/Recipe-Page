@@ -48,8 +48,8 @@ ul {
     margin-bottom: 80px;
 }
 
-#logo {
-    margin-left: 50px
+.nav-main img {
+    margin-left: 50px;
 }
 
 #foto-user {
@@ -70,7 +70,7 @@ ul {
     margin: 0 20px;
     color: #444;
     font-size: 1em;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 24px;
     transition: all 0.5s ease;
 }
@@ -507,30 +507,28 @@ ul {
         margin-left: 20px;
     }
 
-    .nav-main ul.nav-ul-redes {
-        display: none;
-    }
-
     .nav-main ul.nav-ul {
-        display: none;
+        display: block;
         position: fixed;
         top: 0;
         left: 0;
         text-align: center;
+        transform: translateY(-400px);
         background-color: #FFE0E0;
         padding: 30px;
         padding-top: 80px;
         width: 100%;
         z-index: 120;
+        transition: transform .5s ease-in-out;
+    }
+
+    .nav-main ul.nav-ul.show {
+        transform: translateY(0px);
     }
 
     .nav-main ul.nav-ul li {
         padding: 20px;
         display: block;
-    }
-
-    .nav-main ul.nav-ul li a {
-        font-weight: 500;
     }
 
     .ul-perfil {

@@ -69,6 +69,15 @@ ul {
     color: #FF8888;
 }
 
+#foto-user {
+    margin-right: 50px;
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 45px;
+    height: 45px;
+    border-radius: 29px;
+}
+
 .nav-ul-ingresar li a {
     padding: 10px 20px;
     margin-right: 20px;
@@ -98,45 +107,52 @@ ul {
     display: none;
 }
 
+
+/* * --------------------- * */
+/* * ------CONTAINER------ * */
+/* * --------------------- * */
+
 /* * Container */
 
-.content {
-    margin-top: 10px;
+.container {
     padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    border-radius: 5px;
+    border: solid 1px #ffc6c6;
+    width: 900px;
+    margin: 50px auto;
 }
 
 .textos {
     width: 500px;
+    margin-right: 30px;
 }
 
-.content .textos h1 {
-    font-size: 2.25em;
-    font-weight: 800;
-    line-height: 46px;
-    color: #444444;
+.container .textos h1 {
+    margin: 0;
+    color: #ffc6c6;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: 1.9px;
 }
 
-.content .textos p {
+.container .textos p {
     font-size: 1em;
     font-weight: 400;
     line-height: 24px;
     color: #444444;
 }
 
-.imagen  {
-    width: 40%;
-}
-
 .imagen img {
-    width: 100%;
-    margin-top: 50px;
+    width: 70%;
     min-width: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 6px 41px 17px rgba(0,0,0,0.11);
 }
-
 
 
 /* * --------------------- * */
@@ -157,6 +173,7 @@ ul {
     font-size: 0.8em;
     font-weight: 400;
     line-height: 13px;
+    text-align: center;
     padding: 5px;
 }
 
@@ -164,12 +181,13 @@ ul {
     display: block;
 }
 
-.footer .footer-ul-redes li {
-    display: inline-block;
-    padding: 10px 0;
+.footer ul.footer-ul-redes {
+    display: flex;
+    justify-content: center;
 }
 
 .footer .footer-ul-redes li a {
+    display: inline-block;
     padding: 10px;
     margin: 5px;
     color: #444444;
@@ -182,41 +200,12 @@ ul {
 }
 
 
+
 /* * --------------------- * */
 /* * -----RESPONSIVE------ * */
 /* * --------------------- * */
 
-@media screen and (max-width: 1050px) {
-
-    body {
-        overflow: visible;
-    }
-
-    .nav-main .nav-ul li a {
-        padding: 20px 30px;
-        margin: 0 10px;
-    }
-
-    .imagen {
-        width: 80%;
-    }
-
-    .footer {
-        position: relative;
-        margin-top: 30px;
-    }
-
-}
-
-@media screen and (max-width: 900px) {
-
-    body {
-        font-size: 14px;
-    }
-
-    .nav-ul-ingresar {
-        margin-right: 80px;
-    }
+@media screen and (max-width: 985px) {
 
     .menu-btn {
         display: block;
@@ -250,36 +239,50 @@ ul {
         display: block;
     }
 
-    .footer .derechos span {
-        margin: 5px;
-    }
-    
-    .footer .derechos span:last-child {
-        margin-bottom: 20px;
+    .ul-perfil {
+        margin-right: 45px;
     }
 
-    .footer .footer-ul-redes li a {
-        margin: 5px 10px;
+    .container {
+        width: 70%;
+        border-radius: 10px;
     }
 
-}
-
-@media screen and (max-width: 630px) {
-
-    .nav-ul-ingresar {
-        margin-right: 60px;
+    .textos {
+        width: 600px;
+        margin-right: 0;
     }
 
-    .nav-ul-ingresar li a {
-        padding: 10px 30px;
-    }
-
-    .nav-ul-ingresar li:first-child a {
-        margin-right: 25px;
+    .imagen {
+        margin-top: 30px;
+        width: 100%;
+        text-align: center;
     }
 
     .imagen img {
-        min-width: 90%;
+        border-radius: 10px;
+    }
+
+    .footer {
+        position: relative;
+        margin-top: 30px;
     }
 
 }
+
+@media screen and (max-width: 550px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .imagen img {
+        min-width: 200px;
+    }
+
+}
+
