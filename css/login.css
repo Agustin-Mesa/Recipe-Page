@@ -1,0 +1,174 @@
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* * --------------- SCROLL BAR --------------- * */
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f6f6f6;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ffbdbd;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #ff7a7a;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* * LOG IN * */
+
+.caja-principal {
+    width: 320px;
+    border-radius: 10px;
+    margin: 100px auto;
+    border: solid 1px #ffcfcf;
+}
+
+.mensaje {
+    text-align: center;
+    padding: 20px;
+}
+
+#logo {
+    width: 30%;
+}
+
+.mensaje h1 {
+    color: #ffc6c6;
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 64px;
+    margin: 10px 0;
+}
+
+.mensaje p {    
+    width: 280px;
+    margin: auto;
+    margin-bottom: 45px;
+    color: #444444;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+}
+
+.redes-login {
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+    border-radius: 8px;
+    background: #ffcfcf;
+}
+
+.redes-login li {
+    text-align: center;
+}
+
+.redes-login li a {
+    display: block;
+    padding: 10px;
+    color: #444444;
+    transition: all 0.2s ease;
+}
+
+.redes-login li a:hover {
+    color: #fff;
+}
+
+.redes-login li a i{
+    font-size: 2.2em;
+}
+
+.redes-login li a span {
+    display: block;
+    margin-top: 5px;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+
+/* * --------------------- * */
+/* * -------FOOTER-------- * */
+/* * --------------------- * */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer .derechos span {
+    color: #e8e8e8;
+    font-size: 0.8em;
+    font-weight: 400;
+    line-height: 13px;
+    padding: 5px;
+}
+
+.footer .derechos span:last-child {
+    display: block;
+}
+
+.footer .footer-ul-redes li {
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.footer .footer-ul-redes li a {
+    padding: 10px;
+    margin: 5px;
+    color: #444444;
+    font-size: 1.8em;
+    transition: all 0.5s ease;
+}
+
+.footer .footer-ul-redes li a:hover {
+    color: #FF8888;
+}
+
+
+/* * --------------------- * */
+/* * -----RESPONSIVE------ * */
+/* * --------------------- * */
+
+@media screen and (max-width: 450px) {
+
+    body {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-height: 600px) {
+
+    .caja-principal {
+        margin-top: 55px;
+        width: 280px;
+    }
+
+    .mensaje {
+        padding: 0;
+    }
+
+}
