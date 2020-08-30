@@ -171,4 +171,9 @@ ul {
         padding: 0;
     }
 
+    .footer {
+        position: relative;
+        margin-top: 20px;
+    }
+
 }

@@ -429,13 +429,12 @@ ul {
     display: block;
 }
 
-.footer ul.footer-ul-redes {
-    display: flex;
-    justify-content: center;
+.footer .footer-ul-redes li {
+    display: inline-block;
+    padding: 10px 0;
 }
 
 .footer .footer-ul-redes li a {
-    display: inline-block;
     padding: 10px;
     margin: 5px;
     color: #444444;
