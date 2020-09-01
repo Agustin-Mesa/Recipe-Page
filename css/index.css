@@ -201,6 +201,11 @@ ul {
         width: 80%;
     }
 
+    .footer {
+        position: relative;
+        margin-top: 30px;
+    }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -255,10 +260,6 @@ ul {
 
     .footer .footer-ul-redes li a {
         margin: 5px 10px;
-    }
-
-    .footer {
-        margin-top: 30px;
     }
 
 }
