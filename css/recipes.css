@@ -32,7 +32,7 @@ ul {
     list-style: none;
 }
 
-/* Navegación */
+/* Navegation */
 .nav-main {
     font-size: 17px;
     display: flex;
@@ -41,10 +41,20 @@ ul {
     height: 60px;
     padding: 20px 0;
     padding-top: 30px;
+    margin-bottom: 80px;
 }
 
 .nav-main img {
     margin-left: 50px;
+}
+
+#foto-user {
+    margin-right: 45px;
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 45px;
+    height: 45px;
+    border-radius: 29px;
 }
 
 .nav-main ul {
@@ -65,33 +75,9 @@ ul {
     color: #FF8888;
 }
 
+/* In the page */
 #in {
     color: #FF8888;
-}
-
-#foto-user {
-    margin-right: 50px;
-    margin-left: 10px;
-    margin-top: 8px;
-    width: 45px;
-    height: 45px;
-    border-radius: 29px;
-}
-
-.nav-ul-ingresar li a {
-    padding: 10px 20px;
-    margin-right: 20px;
-    color: #444444;
-    font-size: 0.8em;
-    font-weight: 700;
-    line-height: 17px;
-    border-radius: 5px;
-    border: 1px solid #FF8888;
-    transition: all 0.5s ease;
-}
-
-.nav-ul-ingresar li:first-child a:hover {
-    background: #ffbdbd;
 }
 
 /* Menu Button mobile */
@@ -116,12 +102,7 @@ ul {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 110px;
-}
-
-.container div img {
-    border-radius: 5px;
-    box-shadow: 0px 40px 49px 3px rgba(100,100,100,0.1);
+    margin-top: 80px;
 }
 
 .container div h2 {
@@ -136,6 +117,7 @@ ul {
     width: 540px;
     margin-top: 5px;
     margin-bottom: 40px;
+    line-height: 18px;
 }
 
 .container div a {
@@ -197,7 +179,21 @@ ul {
 /* * -----RESPONSIVE------ * */
 /* * --------------------- * */
 
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 1050px) {
+
+    .nav-main .nav-ul li a {
+        padding: 20px 30px;
+        margin: 0 10px;
+    }
+
+    
+    #foto-user {
+        margin-right: 45px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
 
     body {
         font-size: 14px;
