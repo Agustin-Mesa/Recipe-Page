@@ -14,9 +14,14 @@
     <link rel="stylesheet" href="css/normalize.css" />
      <!-- Ícono -->
     <link rel="icon" type="image/png" href="images/Chef-icon.png" />
-    </head>
+
+</head>
 <body>
     
+    <div class="alerta-error" id="alertaError">
+        <p id="alertaP"></p>
+    </div>
+
     <div class="caja-principal">
         <div class="mensaje">
             <a href="index.html"><img src="images/Chef-icon.png" id="logo"></a>
@@ -25,21 +30,15 @@
         </div>
         <ul class="redes-login">
             <li>
-                <a href="#">
+                <button type="button" id="btn-google" onclick="ingresoGoogle()">
                     <i class="fab fa-google"></i>
                     <span>Gmail</span>
-                </a>
+                </button>
             </li>
             <li>
-                <a href="#">
+                <button type="button" id="btn-facebook" onclick="ingresoFacebook()">
                     <i class="fab fa-facebook-f"></i>
                     <span>Facebook</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fab fa-twitter"></i>
-                    <span>Twitter</span>
                 </a>
             </li>
         </ul>
@@ -61,11 +60,26 @@
         </ul>
         <div class="derechos">
             <span>© 2020 NameTutor</span>
-            <span>Todos los derechos reservados</span>
+            <span>All rights reserved</span>
+            <a href="privacy-policy.html">> Privacy policy <</a>
+            <a href="terms-conditions.html">> Terms & Conditions <</a>
         </div>
     </footer>
 
      <!-- CUSTOM JS-->
-    <script src="js/shop.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/scrollReveal.js"></script>
+
+    <!-- FIREBASE -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>

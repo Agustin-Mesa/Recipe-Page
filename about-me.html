@@ -43,7 +43,10 @@
 
             <ul class="ul-perfil">
                 <li>
-                    <a href="#"><img src="images/user-icon.png" id="foto-user"></a>
+                    <a href="#" id="foto-user"></a>
+                    <ul class="submenu-user">
+                        <li id="submenu-user-option"></li>
+                    </ul>
                 </li>
             </ul>
         </nav>
@@ -76,13 +79,30 @@
         </ul>
         <div class="derechos">
             <span>© 2020 NameTutor</span>
-            <span>Todos los derechos reservados</span>
+            <span>All rights reserved</span>
+            <a href="privacy-policy.html">> Privacy policy <</a>
+            <a href="terms-conditions.html">> Terms & Conditions <</a>
         </div>
     </footer>
 
     
      <!-- CUSTOM JS-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/scrollReveal.js"></script>
+
+    <!-- FIREBASE -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+
     <script src="js/about-me.js"></script>
+    <script src="js/login.js"></script>
 
 </body>
 </html>

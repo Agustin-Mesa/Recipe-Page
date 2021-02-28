@@ -17,6 +17,8 @@
 </head>
 <body>
     
+    <div class="alertas"></div>
+
      <!-- MENU BAR -->
     <div class="menu-btn">
         <i class="fas fa-bars"></i>
@@ -43,7 +45,10 @@
 
             <ul class="ul-perfil">
                 <li>
-                    <a href="#"><img src="images/user-icon.png" id="foto-user"></a>
+                    <a href="#" id="foto-user"></a>
+                    <ul class="submenu-user">
+                        <li id="submenu-user-option"></li>
+                    </ul>
                 </li>
             </ul>
         </nav>
@@ -78,7 +83,7 @@
                 <h3>Cookbook Food</h3>
                 <h4>$299</h4>
                 <!-- <span>Add to cart</span> -->
-                <a href="#" id="btn-abrir-popup1">Buy</a>
+                <a href="#" class="btn-compras">Buy</a>
             </div>
 
             <div>
@@ -86,7 +91,7 @@
                 <h3>Cookbook Food</h3>
                 <h4>$299</h4>
                 <!-- <span>Add to cart</span> -->
-                <a href="#" id="btn-abrir-popup2">Buy</a>
+                <a href="#" class="btn-compras">Buy</a>
             </div>
 
             <div>
@@ -94,7 +99,7 @@
                 <h3>Cookbook Food</h3>
                 <h4>$299</h4>
                 <!-- <span>Add to cart</span> -->
-                <a href="#" id="btn-abrir-popup3">Buy</a>
+                <a href="#" class="btn-compras">Buy</a>
             </div>
 
             <div>
@@ -102,7 +107,7 @@
                 <h3>Cookbook Food</h3>
                 <h4>$299</h4>
                 <!-- <span>Add to cart</span> -->
-                <a href="#" id="btn-abrir-popup4">Buy</a>
+                <a href="#" class="btn-compras">Buy</a>
             </div>
 
             <div>
@@ -110,7 +115,7 @@
                 <h3>Cookbook Food</h3>
                 <h4>$299</h4>
                 <!-- <span>Add to cart</span> -->
-                <a href="#" id="btn-abrir-popup5">Buy</a>
+                <a href="#" class="btn-compras">Buy</a>
             </div>
 
             <div>
@@ -118,7 +123,7 @@
                 <h3>Cookbook Food</h3>
                 <h4>$299</h4>
                 <!-- <span>Add to cart</span> -->
-                <a href="#" id="btn-abrir-popup6">Buy</a>
+                <a href="#" class="btn-compras">Buy</a>
             </div>
 
             <div>
@@ -126,7 +131,7 @@
                 <h3>Cookbook Food</h3>
                 <h4>$299</h4>
                 <!-- <span>Add to cart</span> -->
-                <a href="#" id="btn-abrir-popup7">Buy</a>
+                <a href="#" class="btn-compras">Buy</a>
             </div>
 
             <div>
@@ -134,7 +139,7 @@
                 <h3>Cookbook Food</h3>
                 <h4>$299</h4>
                 <!-- <span>Add to cart</span> -->
-                <a href="#" id="btn-abrir-popup8">Buy</a>
+                <a href="#" class="btn-compras">Buy</a>
             </div>
         </div>
     </div>
@@ -164,13 +169,31 @@
         </ul>
         <div class="derechos">
             <span>© 2020 NameTutor</span>
-            <span>Todos los derechos reservados</span>
+            <span>All rights reserved</span>
+            <a href="privacy-policy.html">> Privacy policy <</a>
+            <a href="terms-conditions.html">> Terms & Conditions <</a>
         </div>
     </footer>
 
      <!-- CUSTOM JS-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/scrollReveal.js"></script>
+
+    
+    <!-- FIREBASE -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    
     <script src="js/shop.js"></script>
+    <script src="js/login.js"></script>
 
 </body>
 </html>

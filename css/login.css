@@ -34,6 +34,44 @@ ul {
 
 /* * LOG IN * */
 
+.alerta-error {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: #ffbbbb;
+    border-bottom: 1px solid #ff7777;
+}
+.alerta-error p {
+    width: 70%;
+    margin: auto;
+    color: #444444;
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 23px;
+    text-align: center;
+}
+.alerta-error.show {
+    display: block;
+    animation: difuminado 2s 0s ease;
+}
+
+@keyframes difuminado {
+    0% {
+        transform: translateY(-60px);
+    }
+    10% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* * LOG IN * */
+
 .caja-principal {
     width: 320px;
     border-radius: 10px;
@@ -81,22 +119,28 @@ ul {
     text-align: center;
 }
 
-.redes-login li a {
+.redes-login li button {
     display: block;
     padding: 10px;
     color: #444444;
+    background: transparent;
+    border: transparent;
     transition: all 0.2s ease;
+    cursor: pointer;
+}
+.redes-login li button:focus {
+    outline: transparent;
 }
 
-.redes-login li a:hover {
+.redes-login li button:hover {
     color: #fff;
 }
 
-.redes-login li a i{
+.redes-login li button i{
     font-size: 2.2em;
 }
 
-.redes-login li a span {
+.redes-login li button span {
     display: block;
     margin-top: 5px;
     font-size: 1em;
@@ -118,7 +162,13 @@ ul {
     padding: 10px;
 }
 
-.footer .derechos span {
+.footer .derechos {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .derechos span ,
+.footer .derechos a {
     color: #e8e8e8;
     font-size: 0.8em;
     font-weight: 400;
